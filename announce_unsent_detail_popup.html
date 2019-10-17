@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="msapplication-tap-highlight" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=11;">
+<title>MY SCHOOL - announce_unsent_detail</title>
+<meta name="description" content=""><!--ADD WEB DESCRIPTION-->
+<meta name="keywords" content=""><!--ADD WEB KEYWORDS-->
+<meta name="author" content=""><!--ADD WEB AUTHOR-->
+<!--<link rel="shortcut ico" href="img/favico.ico">-->
+<link rel="stylesheet" href="css/mySchool.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/mySchool.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="js/ie9.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="popup is-active">
+	<div class="u-middle">
+		<div class="popupBox">
+			<div class="popupBox-top">
+				<h2 class="popupBox-title">Alert</h2>
+			</div>
+			<div class="popupBox-area">
+				<div class="popupBox-msg">
+					<div class="icon-alert"></div>
+					<p class="popupBox-txt">전송 완료</p>
+				</div>
+				<div class="popupBox-action">
+					<a class="btn-confirm">Confirm</a>
+				</div>
+			</div>
+		</div>
+		<div class="popupBox">
+			<div class="popupBox-top">
+				<h2 class="popupBox-title">알림</h2>
+			</div>
+			<div class="popupBox-area">
+				<div class="popupBox-msg">
+					<p class="popupBox-txt">전송 확인</p>
+				</div>
+				<div class="popupBox-action">
+					<a class="btn-cancel">Cancel</a>
+					<a class="btn-confirm">Confirm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main">
+	<header class="main-header">
+		<div class="main-logo">
+			<a class="icon-logo"></a>
+		</div>
+		<nav class="main-menu">
+			<ul>
+				<li class="menu-item"><a class="menu-link">school</a></li>
+				<li class="menu-item"><a class="menu-link">teacher</a></li>
+				<li class="menu-item"><a class="menu-link">STUDENT</a></li>
+				<li class="menu-item"><a class="menu-link">EDUCATION</a></li>
+				<li class="menu-item"><a class="menu-link">STUDENT RECORD</a></li>
+				<li class="menu-item"><a class="menu-link">REPORT</a></li>
+				<li class="menu-item is-active"><a class="menu-link">ANNOUNCEMENT</a></li>
+			</ul>
+		</nav>
+
+		<div class="top-menu">
+			<div class="top-menu-item menuAll">
+				<div class="icon-menu"></div>
+				<div class="menuAll-pop">
+					<div class="icon-close"></div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">SCHOOL</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SCHOOL</h3>
+								<a class="menuAll-link">Basic Information</a>
+								<a class="menuAll-link">Characteristic</a>
+								<a class="menuAll-link">School Year / Term</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">CLASS</h3>
+								<a class="menuAll-link">Search Class</a>
+								<a class="menuAll-link">Add Class</a>
+								<a class="menuAll-link">Assign Student</a>
+								<a class="menuAll-link">Close Class</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SCHOOL DATABASE</h3>
+								<a class="menuAll-link">Search School</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">TEACHER</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TEACHER</h3>
+								<a class="menuAll-link">Search Teacher</a>
+								<a class="menuAll-link">Add Teacher</a>
+								<a class="menuAll-link">Dismiss Teacher</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TEACHER DATABASE</h3>
+								<a class="menuAll-link">Search Teacher</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">STUDENT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">STUDENT</h3>
+								<a class="menuAll-link">Search Student</a>
+								<a class="menuAll-link">Add Student</a>
+								<a class="menuAll-link">Expel Student</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">STUDENT DATABASE</h3>
+								<a class="menuAll-link">Search Student</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">CURRICULUM</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">CURRICULUM</h3>
+								<a class="menuAll-link">Curriculum Plan</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SUBJECT</h3>
+								<a class="menuAll-link">School Subject</a>
+								<a class="menuAll-link">Add Subject</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">LECTURE</h3>
+								<a class="menuAll-link">School Lecture</a>
+								<a class="menuAll-link">Add Lecture</a>
+								<a class="menuAll-link">Assign Student</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TIME-TABLE</h3>
+								<a class="menuAll-link">Class Time-table</a>
+								<a class="menuAll-link">Subject Time-table</a>
+								<a class="menuAll-link">Edit Time-table</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">STUDENT RECORD</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">ATTENDANCE</h3>
+								<a class="menuAll-link">Daily Attendance</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">REPORT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">MY REPORT TASK</h3>
+								<a class="menuAll-link">My Task</a>
+								<a class="menuAll-link">Reported Task</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">REPORT TASK BOX</h3>
+								<a class="menuAll-link">Ordered Task</a>
+								<a class="menuAll-link">New Task</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">ANNOUNCEMENT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">ANNOUNCEMNET</h3>
+								<a class="menuAll-link">Inbox</a>
+								<a class="menuAll-link">Sent Announcement</a>
+								<a class="menuAll-link">Unsent Announcement</a>
+								<a class="menuAll-link">New Announcement</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="top-menu-item menuMe">
+				<div class="icon-profile"></div>
+				<div class="menuMe-pop">
+					<div class="profileTag">
+						<div class="profileTag-pic">
+							<div class="profileTag-img" style="background-image: url('img/profile_sample.png')"></div>
+						</div>
+						<div class="profileTag-info">
+							<h2 class="profileTag-name">Micheal Stive Jobsis</h2>
+							<span class="profileTag-position">Admin</span>
+						</div>
+					</div>
+					<div class="menuMe-sub">
+						<ul>
+							<li class="menuMe-item">
+								<div class="icon-myPage"></div>
+								<a class="menuMe-link" href="">My Page</a>
+							</li>
+							<li class="menuMe-item">
+								<div class="icon-logout"></div>
+								<a class="menuMe-link" href="">logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main-area is-active">
+		<aside class="main-aside">
+			<div class="icon-spread"></div>
+			<div class="main-aside-area">
+				<nav class="menuLeft">
+					<!-- 00_menu_school_announcement -->
+					<div class="menuLeft-group">
+						<div class="menuLeft-topic">
+							<div class="icon-bell"></div>
+							<p class="menuLeft-title">ANNOUNCEMNET</p>
+						</div>
+						<ul>
+							<li class="menuLeft-item is-new">
+								<a class="menuLeft-link"><span>Inbox</span></a>
+							</li>
+							<li class="menuLeft-item">
+								<a class="menuLeft-link"><span>Sent Announcement</span></a>
+							</li>
+							<li class="menuLeft-item is-active">
+								<a class="menuLeft-link"><span>Unsent Announcement</span></a>
+							</li>
+							<li class="menuLeft-item">
+								<a class="menuLeft-link"><span>New Announcement</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- //00_menu_school_announcement -->
+				</nav>
+			</div>
+		</aside>
+		<div class="main-container">
+			<nav class="breadcrumb">
+				<span class="breadcrumb-txt">Announcement</span>
+				<span class="breadcrumb-txt">Announcement</span>
+				<span class="breadcrumb-txt">Unsent Announcement</span>
+			</nav>
+			<h1 class="main-title">Detail Unsent Announcement</h1>
+			<div class="main-content">
+				<div class="u-box">
+					<div class="u-tbBox">
+						<div class="u-tb">
+							<div class="u-tb-th">Written Date</div>
+							<div class="u-tb-td">
+								09:00 01-May-2019
+							</div>
+						</div>
+						<div class="u-tb">
+							<div class="u-tb-th">Title</div>
+							<div class="u-tb-td">
+								The title is displayed here. The title is displayed here. The title is displayed here.
+							</div>
+						</div>
+						<div class="u-tb">
+							<div class="u-tb-th">Content</div>
+							<div class="u-tb-td">
+								<p class="tb-txt">Logic notches his third No. 1 album on the Billboard 200 chart as Confessions of a Dangerous Mind debuts atop the tally. The set starts with 80,000 equivalent album units earned in the week ending May 16, according to Nielsen Music. Of that sum, 24,000 were in album sales. Confessions was released on May 10 via Visionary/Def Jam Recordings.</p>
+								<p class="tb-txt">The Billboard 200 chart ranks the most popular albums of the week in the U.S. based on multi-metric consumption as measured in equivalent album units. Units are comprised of traditional album sales, track equivalent albums (TEA) and streaming equivalent albums (SEA). The new May 25-dated chart, where Confessions bows at No. 1, will be posted in full on Billboard's websites on May 21. Logic previously led the list with Bobby Tarantino II (in 2018) and Everybody (2017). Logic made his Billboard 200 debut in 2014 with Under Pressure, which peaked at No. 4 -- his first of six top 10 albums (including Confessions).</p>
+							</div>
+						</div>
+						<div class="u-tb">
+							<div class="u-tb-th">Attachment</div>
+							<div class="u-tb-td">
+								<div class="listBox">
+									<div class="listBox-item">
+										<i class="icon-attach"></i> mother_father_gentleman.jpg
+									</div>
+									<div class="listBox-item">
+										<i class="icon-attach"></i> mother_father.jpg
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-tb">
+							<div class="u-tb-th">Receiver</div>
+							<div class="u-tb-td">
+								<div class="listBox">
+									<div class="listBox-item">
+										Group01 > SubGroup01 <b>(전체 399)</b>
+									</div>
+									<div class="listBox-item">
+										Group01 > SubGroup01 > GroupB-1 <b>(전체 635)</b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-action">
+					<div class="u-float-L">
+						<a class="btn-cancel btn-M">Back</a>
+					</div>
+					<div class="u-float-R">
+						<a class="btn-default btn-M">Edit</a>
+						<a class="btn-confirm btn-M">Send</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

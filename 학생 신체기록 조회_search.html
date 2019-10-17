@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="msapplication-tap-highlight" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=11;">
+<title>MY SCHOOL - 학생 신체기록 조회_search</title>
+<meta name="description" content=""><!--ADD WEB DESCRIPTION-->
+<meta name="keywords" content=""><!--ADD WEB KEYWORDS-->
+<meta name="author" content=""><!--ADD WEB AUTHOR-->
+<!--<link rel="shortcut ico" href="img/favico.ico">-->
+<link rel="stylesheet" href="css/mySchool.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/mySchool.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="js/ie9.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="main">
+	<header class="main-header">
+		<div class="main-logo">
+			<a class="icon-logo"></a>
+		</div>
+		<nav class="main-menu">
+			<ul>
+				<li class="menu-item"><a class="menu-link">school</a></li>
+				<li class="menu-item"><a class="menu-link">teacher</a></li>
+				<li class="menu-item"><a class="menu-link">STUDENT</a></li>
+				<li class="menu-item"><a class="menu-link">EDUCATION</a></li>
+				<li class="menu-item is-active"><a class="menu-link">STUDENT RECORD</a></li>
+				<li class="menu-item"><a class="menu-link">REPORT</a></li>
+				<li class="menu-item"><a class="menu-link">ANNOUNCEMENT</a></li>
+			</ul>
+		</nav>
+
+		<div class="top-menu">
+			<div class="top-menu-item menuAll">
+				<div class="icon-menu"></div>
+				<div class="menuAll-pop">
+					<div class="icon-close"></div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">SCHOOL</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SCHOOL</h3>
+								<a class="menuAll-link">Basic Information</a>
+								<a class="menuAll-link">Characteristic</a>
+								<a class="menuAll-link">School Year / Term</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">CLASS</h3>
+								<a class="menuAll-link">Search Class</a>
+								<a class="menuAll-link">Add Class</a>
+								<a class="menuAll-link">Assign Student</a>
+								<a class="menuAll-link">Attendance Numbers</a>
+								<a class="menuAll-link">Close Class</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SCHOOL DATABASE</h3>
+								<a class="menuAll-link">Search School</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">TEACHER</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TEACHER</h3>
+								<a class="menuAll-link">Search Teacher</a>
+								<a class="menuAll-link">Add Teacher</a>
+								<a class="menuAll-link">Dismiss Teacher</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TEACHER DATABASE</h3>
+								<a class="menuAll-link">Search Teacher</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">STUDENT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">STUDENT</h3>
+								<a class="menuAll-link">Search Student</a>
+								<a class="menuAll-link">Add Student</a>
+								<a class="menuAll-link">Expel Student</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">STUDENT DATABASE</h3>
+								<a class="menuAll-link">Search Student</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">Opinion</h3>
+								<a class="menuAll-link">Opinion by Subject</a>
+								<a class="menuAll-link">Opinion by Student</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">CURRICULUM</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">CURRICULUM</h3>
+								<a class="menuAll-link">Curriculum Plan</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SUBJECT</h3>
+								<a class="menuAll-link">School Subject</a>
+								<a class="menuAll-link">Add Subject</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">LECTURE</h3>
+								<a class="menuAll-link">School Lecture</a>
+								<a class="menuAll-link">Add Lecture</a>
+								<a class="menuAll-link">Assign Student</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TIME-TABLE</h3>
+								<a class="menuAll-link">Class Time-table</a>
+								<a class="menuAll-link">Subject Time-table</a>
+								<a class="menuAll-link">Edit Time-table</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">Examination</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">Exam Plan</h3>
+								<a class="menuAll-link">Search Exam Plan</a>
+								<a class="menuAll-link">Add Exam Plan</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">Exam Schedule</h3>
+								<a class="menuAll-link">Exam Schedule</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">Exam Result</h3>
+								<a class="menuAll-link">Exam Result</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">STUDENT RECORD</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">ATTENDANCE</h3>
+								<a class="menuAll-link">Daily Attendance</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">Physical Examination</h3>
+								<a class="menuAll-link">Physical Examination</a>
+								<a class="menuAll-link">학생 신체기록 조회</a>
+								<a class="menuAll-link">Physical Fitness Test</a>
+								<a class="menuAll-link">Award</a>
+								<a class="menuAll-link">Award From</a>
+								<a class="menuAll-link">General Opinion</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">REPORT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">MY REPORT TASK</h3>
+								<a class="menuAll-link">My Task</a>
+								<a class="menuAll-link">Reported Task</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">REPORT TASK BOX</h3>
+								<a class="menuAll-link">Ordered Task</a>
+								<a class="menuAll-link">New Task</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">ANNOUNCEMENT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">ANNOUNCEMNET</h3>
+								<a class="menuAll-link">Inbox</a>
+								<a class="menuAll-link">Sent Announcement</a>
+								<a class="menuAll-link">Unsent Announcement</a>
+								<a class="menuAll-link">New Announcement</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">수납</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">수납계정</h3>
+								<a class="menuAll-link">수납관리</a>
+								<a class="menuAll-link">수납추가</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">수납 알림장</h3>
+								<a class="menuAll-link">보낸 수납 알림장</a>
+								<a class="menuAll-link">새 수납 알림장</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="top-menu-item menuMe">
+				<div class="icon-profile"></div>
+				<div class="menuMe-pop">
+					<div class="profileTag">
+						<div class="profileTag-pic">
+							<div class="profileTag-img" style="background-image: url('img/profile_sample.png')"></div>
+						</div>
+						<div class="profileTag-info">
+							<h2 class="profileTag-name">Micheal Stive Jobsis</h2>
+							<span class="profileTag-position">Admin</span>
+						</div>
+					</div>
+					<div class="menuMe-sub">
+						<ul>
+							<li class="menuMe-item">
+								<div class="icon-myPage"></div>
+								<a class="menuMe-link" href="">My Page</a>
+							</li>
+							<li class="menuMe-item">
+								<div class="icon-logout"></div>
+								<a class="menuMe-link" href="">logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main-area is-active">
+		<aside class="main-aside">
+			<div class="icon-spread"></div>
+			<div class="main-aside-area">
+				<nav class="menuLeft">
+					<div class="menuLeft-group">
+						<div class="menuLeft-topic">
+							<div class="icon-measure"></div>
+							<p class="menuLeft-title">Physical Examination</p>
+						</div>
+						<ul>
+							<li class="menuLeft-item">
+								<a class="menuLeft-link"><span>Physical Examination</span></a>
+							</li>
+							<li class="menuLeft-item is-active">
+								<a class="menuLeft-link"><span>학생 신체기록 조회</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="menuLeft-group">
+						<div class="menuLeft-topic">
+							<div class="icon-noteStat"></div>
+							<p class="menuLeft-title">Report Card</p>
+						</div>
+						<ul>
+							<li class="menuLeft-item">
+								<a class="menuLeft-link"><span>학기별 성적 조회</span></a>
+							</li>
+							<li class="menuLeft-item">
+								<a class="menuLeft-link"><span>학기별 성적 다운로드</span></a>
+							</li>
+							<li class="menuLeft-item">
+								<a class="menuLeft-link"><span>학기별 성적표 서식</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</aside>
+		<div class="main-container">
+			<nav class="breadcrumb">
+				<span class="breadcrumb-txt">Student Record</span>
+				<span class="breadcrumb-txt">Physical Examination</span>
+				<span class="breadcrumb-txt">학생 신체기록 조회</span>
+			</nav>
+			<h1 class="main-title">학생 신체기록 조회</h1>
+			<div class="main-content">
+				<div class="u-box">
+					<div class="search">
+						<div class="search-adv">
+							<div class="search-item">
+								<h3 class="search-title">학년도</h3>
+								<div class="u-select">
+									<select>
+										<option>선택</option>
+										<option selected>2018-2019</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-item">
+								<h3 class="search-title">학년</h3>
+								<div class="u-select">
+									<select>
+										<option>선택</option>
+										<option selected>4</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-item">
+								<h3 class="search-title">반</h3>
+								<div class="u-select">
+									<select>
+										<option>선택</option>
+										<option selected>1</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-action">
+								<div class="btn-default">Search</div>
+							</div>
+						</div>
+					</div>
+					<div class="searchList">
+						<div class="searchList-info">
+							반 전체 학생수 <span class="c-focus">56</span>
+						</div>
+						<div class="u-tbBox">
+							<table class="u-tb-list">
+								<tr>
+									<th style="width: 80px;">출석번호</th>
+									<th>학생ID</th>
+									<th>Student Name</th>
+									<th>생년월일</th>
+									<th>성별</th>
+									<th>혈액형</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>1298123548</td>
+									<td class="u-left">Student Name Sample</td>
+									<td>04-Sep-1990</td>
+									<td>남성</td>
+									<td>A(RH+)</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>1298123548</td>
+									<td class="u-left">Student Name Sample</td>
+									<td>04-Sep-1990</td>
+									<td>여성</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>1298123548</td>
+									<td class="u-left">Student Name Sample</td>
+									<td>04-Sep-1990</td>
+									<td>남성</td>
+									<td>A(RH+)</td>
+								</tr>
+								<tr>
+									<td>53</td>
+									<td>1298123548</td>
+									<td class="u-left">Student Name Sample</td>
+									<td>04-Sep-1990</td>
+									<td>여성</td>
+									<td>O(RH+)</td>
+								</tr>
+								<tr>
+									<td>54</td>
+									<td>1298123548</td>
+									<td class="u-left">Student Name Sample</td>
+									<td>04-Sep-1990</td>
+									<td>여성</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>55</td>
+									<td>1298123548</td>
+									<td class="u-left">Student Name Sample</td>
+									<td>04-Sep-1990</td>
+									<td>남성</td>
+									<td>A(RH+)</td>
+								</tr>
+								<tr>
+									<td>56</td>
+									<td>1298123548</td>
+									<td class="u-left">Student Name Sample</td>
+									<td>04-Sep-1990</td>
+									<td>여성</td>
+									<td>A(RH+)</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

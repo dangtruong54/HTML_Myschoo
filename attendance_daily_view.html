@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="msapplication-tap-highlight" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=11;">
+<title>MY SCHOOL - attendance_daily_view</title>
+<meta name="description" content=""><!--ADD WEB DESCRIPTION-->
+<meta name="keywords" content=""><!--ADD WEB KEYWORDS-->
+<meta name="author" content=""><!--ADD WEB AUTHOR-->
+<!--<link rel="shortcut ico" href="img/favico.ico">-->
+<link rel="stylesheet" href="css/mySchool.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/mySchool.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="js/ie9.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="main">
+	<header class="main-header">
+		<div class="main-logo">
+			<a class="icon-logo"></a>
+		</div>
+		<nav class="main-menu">
+			<ul>
+				<li class="menu-item"><a class="menu-link">school</a></li>
+				<li class="menu-item"><a class="menu-link">teacher</a></li>
+				<li class="menu-item"><a class="menu-link">STUDENT</a></li>
+				<li class="menu-item"><a class="menu-link">EDUCATION</a></li>
+				<li class="menu-item is-active"><a class="menu-link">STUDENT RECORD</a></li>
+				<li class="menu-item"><a class="menu-link">REPORT</a></li>
+				<li class="menu-item"><a class="menu-link">ANNOUNCEMENT</a></li>
+			</ul>
+		</nav>
+
+		<div class="top-menu">
+			<div class="top-menu-item menuAll">
+				<div class="icon-menu"></div>
+				<div class="menuAll-pop">
+					<div class="icon-close"></div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">SCHOOL</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SCHOOL</h3>
+								<a class="menuAll-link">Basic Information</a>
+								<a class="menuAll-link">Characteristic</a>
+								<a class="menuAll-link">School Year / Term</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">CLASS</h3>
+								<a class="menuAll-link">Search Class</a>
+								<a class="menuAll-link">Add Class</a>
+								<a class="menuAll-link">Assign Student</a>
+								<a class="menuAll-link">Close Class</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SCHOOL DATABASE</h3>
+								<a class="menuAll-link">Search School</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">TEACHER</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TEACHER</h3>
+								<a class="menuAll-link">Search Teacher</a>
+								<a class="menuAll-link">Add Teacher</a>
+								<a class="menuAll-link">Dismiss Teacher</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TEACHER DATABASE</h3>
+								<a class="menuAll-link">Search Teacher</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">STUDENT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">STUDENT</h3>
+								<a class="menuAll-link">Search Student</a>
+								<a class="menuAll-link">Add Student</a>
+								<a class="menuAll-link">Expel Student</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">STUDENT DATABASE</h3>
+								<a class="menuAll-link">Search Student</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">CURRICULUM</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">CURRICULUM</h3>
+								<a class="menuAll-link">Curriculum Plan</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">SUBJECT</h3>
+								<a class="menuAll-link">School Subject</a>
+								<a class="menuAll-link">Add Subject</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">LECTURE</h3>
+								<a class="menuAll-link">School Lecture</a>
+								<a class="menuAll-link">Add Lecture</a>
+								<a class="menuAll-link">Assign Student</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">TIME-TABLE</h3>
+								<a class="menuAll-link">Class Time-table</a>
+								<a class="menuAll-link">Subject Time-table</a>
+								<a class="menuAll-link">Edit Time-table</a>
+							</div>
+						</div>
+					</div>
+					<div class="menuAll-item">
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">STUDENT RECORD</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">ATTENDANCE</h3>
+								<a class="menuAll-link">Daily Attendance</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">REPORT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">MY REPORT TASK</h3>
+								<a class="menuAll-link">My Task</a>
+								<a class="menuAll-link">Reported Task</a>
+							</div>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">REPORT TASK BOX</h3>
+								<a class="menuAll-link">Ordered Task</a>
+								<a class="menuAll-link">New Task</a>
+							</div>
+						</div>
+						<div class="menuAll-group">
+							<h2 class="menuAll-topic">ANNOUNCEMENT</h2>
+							<div class="menuAll-subGroup">
+								<h3 class="menuAll-title">ANNOUNCEMNET</h3>
+								<a class="menuAll-link">Inbox</a>
+								<a class="menuAll-link">Sent Announcement</a>
+								<a class="menuAll-link">Unsent Announcement</a>
+								<a class="menuAll-link">New Announcement</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="top-menu-item menuMe">
+				<div class="icon-profile"></div>
+				<div class="menuMe-pop">
+					<div class="profileTag">
+						<div class="profileTag-pic">
+							<div class="profileTag-img" style="background-image: url('img/profile_sample.png')"></div>
+						</div>
+						<div class="profileTag-info">
+							<h2 class="profileTag-name">Micheal Stive Jobsis</h2>
+							<span class="profileTag-position">Admin</span>
+						</div>
+					</div>
+					<div class="menuMe-sub">
+						<ul>
+							<li class="menuMe-item">
+								<div class="icon-myPage"></div>
+								<a class="menuMe-link" href="">My Page</a>
+							</li>
+							<li class="menuMe-item">
+								<div class="icon-logout"></div>
+								<a class="menuMe-link" href="">logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main-area is-active">
+		<aside class="main-aside">
+			<div class="icon-spread"></div>
+			<div class="main-aside-area">
+				<nav class="menuLeft">
+					<!-- 00_menu_school_student_record -->
+					<div class="menuLeft-group">
+						<div class="menuLeft-topic">
+							<div class="icon-attend"></div>
+							<p class="menuLeft-title">ATTENDANCE</p>
+						</div>
+						<ul>
+							<li class="menuLeft-item is-active">
+								<a class="menuLeft-link"><span>Daily Attendance</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- //00_menu_school_student_record -->
+				</nav>
+			</div>
+		</aside>
+		<div class="main-container">
+			<nav class="breadcrumb">
+				<span class="breadcrumb-txt">Student Record</span>
+				<span class="breadcrumb-txt">Attendance</span>
+			</nav>
+			<h1 class="main-title">Daily Attendance</h1>
+			<div class="main-content">
+				<div class="u-box">
+					<div class="search">
+						<div class="search-adv">
+							<div class="search-item">
+								<h3 class="search-title">Year</h3>
+								<div class="u-select">
+									<select>
+										<option>2018 - 2019</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-item">
+								<h3 class="search-title">학년</h3>
+								<div class="u-select">
+									<select>
+										<option></option>
+									</select>
+								</div>
+							</div>
+							<div class="search-item">
+								<h3 class="search-title">학급</h3>
+								<div class="u-select">
+									<select>
+										<option>3/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-item">
+								<h3 class="search-title">Month</h3>
+								<div class="u-select">
+									<select>
+										<option>May</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-action">
+								<div class="btn-default">Search</div>
+							</div>
+						</div>
+					</div>
+					<div class="searchList">
+						<div class="attend-PS">
+							<i class="icon-o"></i><span class="attend-txt">출석</span>
+							<i class="icon-late"></i><span class="attend-txt">지각/조퇴</span>
+							<i class="icon-x"></i><span class="attend-txt">결석</span>
+							<i class="icon-qm"></i><span class="attend-txt">출석상태 미설정</span>
+							<i class="u-line"></i>
+							아이콘색상 : <span class="attend-txt c-focus">확인필요</span>
+						</div>
+						<div class="tb-PS">
+							<i class="u-line"></i> 배경색 :
+							<div class="tb-PS-color tb-PS-color-1"></div>전자출석 완료
+							<div class="tb-PS-color tb-PS-color-2"></div>전자출석 안함
+						</div>
+						<div class="attend">
+							<div class="attend-L">
+								<div class="u-tbBox">
+									<table class="u-tb-list">
+										<tr>
+											<th style="width: 80px;">번호</th>
+											<th style="width: 230px;">학생이름</th>
+											<th style="width: 130px;">학생코드</th>
+											<th>성별</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>62</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>63</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>64</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>65</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+										<tr>
+											<td>66</td>
+											<td class="u-left">Benedict Cumberbatch Jr</td>
+											<td>1234567890</td>
+											<td>남성</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="attend-R u-scroll">
+								<div class="u-tbBox">
+									<table class="u-tb-list">
+										<tr>
+											<th style="width: 44px;">1</th>
+											<th style="width: 44px;">2</th>
+											<th style="width: 44px;">3</th>
+											<th style="width: 44px;">4</th>
+											<th style="width: 44px;">5</th>
+											<th style="width: 44px;">6</th>
+											<th style="width: 44px;">7</th>
+											<th style="width: 44px;">8</th>
+											<th style="width: 44px;">9</th>
+											<th style="width: 44px;">10</th>
+											<th style="width: 44px;">11</th>
+											<th style="width: 44px;">12</th>
+											<th style="width: 44px;">13</th>
+											<th style="width: 44px;">14</th>
+											<th style="width: 44px;">15</th>
+											<th style="width: 44px;">16</th>
+											<th style="width: 44px;">17</th>
+											<th style="width: 44px;">18</th>
+											<th style="width: 44px;">19</th>
+											<th style="width: 44px;">20</th>
+											<th style="width: 44px;">21</th>
+											<th style="width: 44px;">22</th>
+											<th style="width: 44px;">23</th>
+											<th style="width: 44px;">24</th>
+											<th style="width: 44px;">25</th>
+											<th style="width: 44px;">26</th>
+											<th style="width: 44px;">27</th>
+											<th style="width: 44px;">28</th>
+											<th style="width: 44px;">29</th>
+											<th style="width: 44px;">30</th>
+											<th style="width: 44px;">31</th>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-PS-bg">
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-x-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-qm-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-late-2"></a>
+											</td>
+											<td class="tb-PS-bg">
+												
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-PS-bg">
+												<a class="icon-qm"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-x-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-PS-bg">
+												<a class="icon-o-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o-2"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o-2"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-qm"></a>
+											</td>
+											<td>
+												<a class="icon-late"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-x"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-qm"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-x"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+										<tr>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td>
+												<a class="icon-o"></a>
+											</td>
+											<td class="tb-dim-bg"></td>
+											<td class="tb-dim-bg"></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
